@@ -1,0 +1,116 @@
+﻿@model IEnumerable<CEROK_WEBAPP.Models.HastaModel>
+
+@{
+    ViewData["Title"] = "HastaView";
+}
+
+<h1>HastaView</h1>
+<head>
+    <style type="text/css">
+        body {
+            background: #ffffff;
+            font-size: 14px;
+            font-family: Trebuchet MS;
+        }
+    </style>
+</head>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hastaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sifre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kanGrubu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.boy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kilo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hastaID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sifre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cinsiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dogumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kanGrubu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.yas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.boy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kilo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

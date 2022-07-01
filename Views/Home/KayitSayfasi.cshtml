@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    <html>
+    <head>
+        <title>Kullanıcı Kayıt Formu</title>
+        <style type="text/css">
+            body {
+                background: #db9ce5;
+                font-size: 14px;
+                font-family: Trebuchet MS;
+            }
+
+            #kayitFormu {
+                border-radius: 10px;
+                background: #ffffff;
+                width: 400px;
+                margin: auto;
+                margin-top: 40px;
+                padding: 25px;
+                text-align: center;
+            }
+
+            input, button {
+                border-radius: 5px;
+                border: none;
+                width: 300px;
+                height: 50px;
+                margin: 20px 0px 20px 0px;
+                background: rgba(240,240,240,.5);
+                padding-left: 15px;
+                font-style: italic;
+            }
+
+            .btn {
+                background: #8bbeda;
+                color: white;
+            }
+
+            h3 {
+                color: #333;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="kayitFormu">
+            <form action="kayityap.php" method="get">
+                <h3>KULLANICI Kayıt Formu</h3>
+                <input type="text" name="adiniz" placeholder="kullanıcı adı" required maxlength="6" />
+
+                <input type="email" name="eposta" placeholder="eposta giriniz" required />
+
+                <input type="password" name="parola" placeholder="şifrenizi giriniz" required pattern="[0-9a-zA-Z]{5}" />
+
+                <input class="btn" type="submit" value="KAYIT OL" onclick="kayıtButonu" />
+            </form>
+
+        </div>
+
+
+    </body>
+</html>
+</div>
